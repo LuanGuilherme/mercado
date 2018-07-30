@@ -1,5 +1,6 @@
 <?php
 require "cnx.php";
+require 'produtoModelo.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,19 +23,6 @@ require "cnx.php";
 </div>
 </body>
 </html>
-
-<?php
-$nomeproduto = @$_GET["nomeproduto"];
-
-$comando = "SELECT * FROM produtos WHERE nomeproduto = '$nomeproduto'";
-$retorno = mysqli_query(conexao(), $comando);
-
-$registro = mysqli_fetch_assoc($retorno);
-$idproduto = $registro["idproduto"];
-
-if ($idproduto) {
-	echo "enviado!";
-	header("refresh:0; url=deletarProduto.php?idproduto=$idproduto");	
-}
-
+<?php 
+	deletarProduto();
 ?>

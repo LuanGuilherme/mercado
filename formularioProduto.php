@@ -1,3 +1,4 @@
+<?php require 'produtoModelo.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 <?php require "menu.php";  ?>
 <div class="edit">
 	<h1>Adicionar Produto</h1> <br>
-	<form action="PHP/adicionarProduto.php" method="POST">
+	<form action="" method="POST">
 		Nome do Produto: <input class="form" type="text" name="nomeproduto"> <br>
 		<br>
 		Preço: <input class="form" type="text" name="preco"> <br>
@@ -48,3 +49,4 @@
 <?php require "rodape.php"; ?>
 </body>
 </html>
+<?php adicionarProduto(); ?>
