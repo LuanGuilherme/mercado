@@ -24,7 +24,7 @@ function validacao(){
 		document.form.getElementById('senhad').focus();
 		document.getElementById('form').action = "";
 	}else{
-		document.getElementById('form').action = "PHP/cadastroPHP.php";
+		document.getElementById('form').action = "PHP/clienteModelo.php";
 	}
 }
 </script>
