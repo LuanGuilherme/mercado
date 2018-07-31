@@ -1,3 +1,4 @@
+<?php require 'clienteModelo.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 	<?php require 'menu.php'; ?>
-	<form action="PHP/loginPHP.php" method="POST">
+	<form method="POST">
 	<div class="dados">
 		<h1>Login</h1><br>
 		<label for="nome">Nome: </label>
@@ -23,3 +24,8 @@
 	</form>
 </body>
 </html>
+<?php   
+if (isset($_POST["nome"]) && isset($_POST["senha"])) {
+	login();	
+}
+?>
